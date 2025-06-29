@@ -2,5 +2,25 @@
 title: "Biden Polling"
 author : "Jishnu Veerapaneni"
 format: html
+
+execute :
+    echo : false
 ---
+
+We are looking at voter behavior for the 2024 presidential election between Biden and Trump . Using a survey from March of 2024, we will attempt to determine what proportion of all votes will be cast for Joe Biden in the 2024 election.
+
+
+```{r}
+#| message: false
+library(tidyverse)
+
+poll_data <- tibble(biden = as.factor(c(rep("Yes", 655), 
+                                        rep("No", 904)))) |> 
+                slice_sample(prop = 1)
+
+```
+
+
+
+
 
