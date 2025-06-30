@@ -7,7 +7,7 @@ execute :
     echo : false
 ---
 
-We are looking at voter behavior for the 2024 presidential election between Biden and Trump . Using a survey from March of 2024, we will attempt to determine what proportion of all votes will be cast for Joe Biden in the 2024 election.
+We are looking at voter behavior for the 2024 presidential election between Biden and Trump . Using a survey from March of 2024, we will attempt to determine what proportion of all votes will be cast for Joe Biden in the 2024 election. The public polls conducted in March 2024 by YouGov is a good idea of voter trajectory, but incomplete due to the time period before the election in November, we estimate the proportion of votes Joe Biden will recieve using only pre-concieved data without factoring in any events that might happen between now and the day of the election swaying voter ideas.
 
 
 ```{r}
@@ -18,8 +18,26 @@ poll_data <- tibble(biden = as.factor(c(rep("Yes", 655),
                                         rep("No", 904)))) |> 
                 slice_sample(prop = 1)
 
+
+
+library(tidymodels)
+library(broom)
+
+
+
+
 ```
 
+
+```{r}
+#| cache: true
+
+
+fit_biden <- logistic_reg() |> 
+  fit(biden ~ 1, data = poll_data)
+
+
+```
 
 
 
