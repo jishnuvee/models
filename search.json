@@ -1,0 +1,9 @@
+[
+  {
+    "objectID": "analysis.html",
+    "href": "analysis.html",
+    "title": "Biden Polling",
+    "section": "",
+    "text": "We are looking at voter behavior for the 2024 presidential election between Biden and Trump . Using a survey from March of 2024, we will attempt to determine what proportion of all votes will be cast for Joe Biden in the 2024 election. The public polls conducted in March 2024 by YouGov is a good idea of voter trajectory, but incomplete due to the time period before the election in November, we estimate the proportion of votes Joe Biden will recieve using only pre-concieved data without factoring in any events that might happen between now and the day of the election swaying voter ideas. We model the voter sentiment of Joe Biden, using a YES or NO logistic function showing their support for Joe Biden. We are able to effectively determine as of March 2024 that the support for President Biden is at 42% which is not a great percentage considering he is considering a reelection, but this data is not entirely solid and premature due to the fact that there are many more months till the election where voter sentiment can sway either way.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nModel Estimates with Confidence Intervals\n\n\nterm\nestimate\nconf.low\nconf.high\n\n\n\n\n(Intercept)\n37.227\n33.957\n40.497\n\n\nwt\n−3.878\n−5.172\n−2.584\n\n\nhp\n−0.032\n−0.050\n−0.013\n\n\n\n\n\n\n\n```"
+  }
+]
